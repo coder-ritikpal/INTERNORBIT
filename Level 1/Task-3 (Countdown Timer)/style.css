@@ -1,0 +1,166 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.input-area {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(105, 113, 133);
+  color: white;
+  min-width: 130px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.button-group button {
+  flex: 1;
+  min-width: 80px;
+  max-width: 120px;
+}
+
+
+button:nth-of-type(1) {
+  background-color: #27ae60; 
+}
+
+button:nth-of-type(2) {
+  background-color: #f1c40f; 
+  color: black;
+}
+
+button:nth-of-type(3) {
+  background-color: #e74c3c; 
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digit {
+  width: 80px;
+  height: 100px;
+  background-color: #057760;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+label {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.colon {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+.digit.flip {
+  animation: flip 0.5s ease-in-out;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .input-area {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input,
+  button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .digit {
+    width: 60px;
+    height: 80px;
+    font-size: 2rem;
+  }
+
+  label {
+    font-size: 0.75rem;
+  }
+
+  .colon {
+    font-size: 2rem;
+  }
+}
